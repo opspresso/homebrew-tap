@@ -6,5 +6,5 @@ A collection of Homebrew formulae for Opspresso projects.
 
 ```bash
 brew tap opspresso/tap
-brew install opspresso/tap/toast-app
+brew install opspresso/tap/toast
 ```

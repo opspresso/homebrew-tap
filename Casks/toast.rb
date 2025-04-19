@@ -1,4 +1,4 @@
-cask "toast-app" do
+cask "toast" do
   version "0.1.0"
   sha256 :no_check
 
