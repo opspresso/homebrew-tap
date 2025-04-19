@@ -4,14 +4,17 @@ set -e
 
 # 환경 설정
 OS_NAME="$(uname | awk '{print tolower($0)}')"
+
 SHELL_DIR=$(dirname $0)
 
 # 기본 Git 설정
 GIT_USERNAME="${GIT_USERNAME:-nalbam-bot}"
 GIT_USEREMAIL="${GIT_USEREMAIL:-bot@nalbam.com}"
+
 BRANCH="${BRANCH:-main}"
-USERNAME="${CIRCLE_PROJECT_USERNAME:-opspresso}"
-REPONAME="${CIRCLE_PROJECT_REPONAME:-homebrew-tap}"
+
+USERNAME="${PROJECT_USERNAME:-opspresso}"
+REPONAME="${PROJECT_REPONAME:-homebrew-tap}"
 
 # 메시지 출력 함수
 echo_message() {
