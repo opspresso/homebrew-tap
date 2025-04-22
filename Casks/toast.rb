@@ -1,5 +1,5 @@
 cask "toast" do
-  version "0.3.0"
+  version "0.3.1"
   sha256 :no_check
 
   url "https://github.com/opspresso/toast-app/releases/download/v#{version}/Toast-#{version}-arm64.dmg"
