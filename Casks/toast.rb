@@ -12,8 +12,8 @@ cask "toast" do
   auto_updates true
 
   zap trash: [
-    "~/Library/Application Support/toast-app",
-    "~/Library/Preferences/com.opspresso.toast-app.plist",
-    "~/Library/Saved Application State/com.opspresso.toast-app.savedState"
+    "~/Library/Application Support/Toast",
+    "~/Library/Preferences/com.opspresso.Toast.plist",
+    "~/Library/Saved Application State/com.opspresso.Toast.savedState"
   ]
 end
