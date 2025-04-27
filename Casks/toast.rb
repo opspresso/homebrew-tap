@@ -13,7 +13,10 @@ cask "toast" do
 
   zap trash: [
     "~/Library/Application Support/Toast",
+    "~/Library/Application Support/toast-app",
     "~/Library/Preferences/com.opspresso.Toast.plist",
-    "~/Library/Saved Application State/com.opspresso.Toast.savedState"
+    "~/Library/Preferences/com.opspresso.toast-app.plist",
+    "~/Library/Saved Application State/com.opspresso.Toast.savedState",
+    "~/Library/Saved Application State/com.opspresso.toast-app.savedState"
   ]
 end
