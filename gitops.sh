@@ -11,13 +11,13 @@ SHELL_DIR=$(dirname $0)
 DRY_RUN="${DRY_RUN:-0}"
 
 # 기본 Git 설정
-GIT_USERNAME="${GIT_USERNAME:-nalbam-bot}"
-GIT_USEREMAIL="${GIT_USEREMAIL:-bot@nalbam.com}"
+GIT_USERNAME="${GIT_USERNAME:-'nalbam-bot'}"
+GIT_USEREMAIL="${GIT_USEREMAIL:-'bot@nalbam.com'}"
 
-BRANCH="${BRANCH:-main}"
+BRANCH="${BRANCH:-'main'}"
 
-USERNAME="${PROJECT_USERNAME:-opspresso}"
-REPONAME="${PROJECT_REPONAME:-homebrew-tap}"
+USERNAME="${PROJECT_USERNAME:-'opspresso'}"
+REPONAME="${PROJECT_REPONAME:-'homebrew-tap'}"
 
 # CI 환경 감지
 CI="${CI:-false}"
@@ -73,6 +73,7 @@ main() {
   # 환경 변수 확인
   info "TG_PROJECT: ${TG_PROJECT}"
   info "TG_VERSION: ${TG_VERSION}"
+  info "TG_SHA256: ${TG_SHA256:-':no_check'}"
 
   # 필수 환경변수 확인
   if [ -z "${TG_PROJECT}" ] || [ -z "${TG_VERSION}" ]; then
@@ -105,6 +106,12 @@ main() {
   # 버전 업데이트
   command_log "버전 업데이트: ${version}"
   replace_in_file "s/version \".*\"/version \"${version}\"/" "${target_file}"
+
+  # SHA256 업데이트
+  command_log "SHA256 업데이트: ${TG_SHA256}"
+  if [ "${TG_SHA256}" != ":no_check" ]; then
+    replace_in_file "s/sha256 \".*\"/sha256 \"${TG_SHA256}\"/" "${target_file}"
+  fi
 
   # DRY_RUN 모드가 아닐 경우 Git 커밋/푸시 작업 수행
   if [ "${DRY_RUN}" != "1" ]; then
