@@ -20,5 +20,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GHP_TOKEN }}
           TG_PROJECT: ${{ github.event.client_payload.project }}
           TG_VERSION: ${{ github.event.client_payload.version }}
+          TG_SHA256: ${{ github.event.client_payload.sha256 }}
         run: |
           bash ./gitops.sh
