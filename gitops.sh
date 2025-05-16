@@ -110,7 +110,8 @@ main() {
   # SHA256 업데이트
   command_log "SHA256 업데이트: ${TG_SHA256}"
   if [ "${TG_SHA256}" != "" ]; then
-    replace_in_file "s/sha256 \".*\"/sha256 \"${TG_SHA256}\"/" "${target_file}"
+    # 다양한 형식의 sha256 값(문자열 또는 심볼)을 처리
+    replace_in_file "s/sha256 .*$/sha256 \"${TG_SHA256}\"/" "${target_file}"
   fi
 
   # DRY_RUN 모드가 아닐 경우 Git 커밋/푸시 작업 수행
