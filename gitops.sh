@@ -11,13 +11,13 @@ SHELL_DIR=$(dirname $0)
 DRY_RUN="${DRY_RUN:-0}"
 
 # 기본 Git 설정
-GIT_USERNAME="${GIT_USERNAME:-'nalbam-bot'}"
-GIT_USEREMAIL="${GIT_USEREMAIL:-'bot@nalbam.com'}"
+GIT_USERNAME="nalbam-bot"
+GIT_USEREMAIL="bot@nalbam.com"
 
-BRANCH="${BRANCH:-'main'}"
+BRANCH="${BRANCH:-main}"
 
-USERNAME="${PROJECT_USERNAME:-'opspresso'}"
-REPONAME="${PROJECT_REPONAME:-'homebrew-tap'}"
+USERNAME="${PROJECT_USERNAME:-opspresso}"
+REPONAME="${PROJECT_REPONAME:-homebrew-tap}"
 
 # CI 환경 감지
 CI="${CI:-false}"
@@ -120,7 +120,7 @@ main() {
     git add "${target_file}"
 
     command_log "git commit"
-    git commit -m "${TG_PROJECT} ${TG_VERSION} 버전 업데이트"
+    git commit -m "${TG_PROJECT} ${TG_VERSION} Version Update"
 
     # 변경사항 푸시
     command_log "git push"
