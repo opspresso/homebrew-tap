@@ -1,11 +1,11 @@
 cask "toast" do
-  version "0.5.60"
+  version "0.5.62"
   sha256 :no_check
 
   url "https://github.com/opspresso/toast/releases/download/v#{version}/Toast-#{version}-arm64.dmg"
   name "Toast"
   desc "A customizable shortcut launcher for macOS and Windows"
-  homepage "https://app.toast.sh"
+  homepage "https://toast.sh"
 
   app "Toast.app"
 
