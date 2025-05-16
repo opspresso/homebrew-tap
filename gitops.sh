@@ -73,7 +73,7 @@ main() {
   # 환경 변수 확인
   info "TG_PROJECT: ${TG_PROJECT}"
   info "TG_VERSION: ${TG_VERSION}"
-  info "TG_SHA256: ${TG_SHA256:-':no_check'}"
+  info "TG_SHA256: ${TG_SHA256}"
 
   # 필수 환경변수 확인
   if [ -z "${TG_PROJECT}" ] || [ -z "${TG_VERSION}" ]; then
@@ -109,7 +109,7 @@ main() {
 
   # SHA256 업데이트
   command_log "SHA256 업데이트: ${TG_SHA256}"
-  if [ "${TG_SHA256}" != ":no_check" ]; then
+  if [ "${TG_SHA256}" != "" ]; then
     replace_in_file "s/sha256 \".*\"/sha256 \"${TG_SHA256}\"/" "${target_file}"
   fi
 
