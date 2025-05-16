@@ -109,7 +109,7 @@ main() {
 
   # SHA256 업데이트
   command_log "SHA256 업데이트: ${TG_SHA256}"
-  if [ "${TG_SHA256}" != "" ]; then
+  if [ -n "${TG_SHA256}" ]; then
     replace_in_file "s/sha256 \".*\"/sha256 \"${TG_SHA256}\"/" "${target_file}"
   fi
 
