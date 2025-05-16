@@ -124,8 +124,8 @@ main() {
 
     # 변경사항 푸시
     command_log "git push"
-    if [ -n "${GITHUB_TOKEN}" ]; then
-      git push -q "https://${GITHUB_TOKEN}@github.com/${USERNAME}/${REPONAME}.git" ${BRANCH}
+    if [ -n "${GHP_TOKEN}" ]; then
+      git push -q "https://${GHP_TOKEN}@github.com/${USERNAME}/${REPONAME}.git" ${BRANCH}
     else
       git push origin ${BRANCH}
     fi
