@@ -5,7 +5,7 @@ cask "toast" do
   url "https://github.com/opspresso/toast/releases/download/v#{version}/Toast-#{version}-arm64.dmg"
   name "Toast"
   desc "A customizable shortcut launcher for macOS and Windows"
-  homepage "https://toast.sh"
+  homepage "https://toastapp.io"
 
   app "Toast.app"
 
