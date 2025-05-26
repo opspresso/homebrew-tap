@@ -13,7 +13,7 @@ brew install opspresso/tap/toast
 
 ```bash
 TG_PROJECT="toast"
-TG_VERSION="v0.6.1"
+TG_VERSION="v0.7.1"
 TG_SHA256="dd03b739a4286a0440ebee4036c6b0580a659b9db670305761b1262e7107b0f1"
 
 PAYLOAD="{\"event_type\":\"gitops\","
