@@ -1,6 +1,6 @@
 cask "toast" do
-  version "0.15.2"
-  sha256 "c14f14876f0683f67c896e00ab7b04727a4424d342fc4e66b8a2233f933c356f"
+  version "0.15.3"
+  sha256 "de9913e22edc6d0e29dee836c43fa969719f77cbca98b6efcf23ebf57182c6bc"
 
   url "https://github.com/opspresso/toast/releases/download/v#{version}/Toast-#{version}-arm64.dmg"
   name "Toast"
