@@ -1,6 +1,6 @@
 cask "vibemon" do
-  version "2.0.2"
-  sha256 "fc9d9c497c3b68585c630d1dc8db3faaff63e24d8fcdba408e3d53032ad30384"
+  version "2.0.3"
+  sha256 "9e41662b336cbbb56b07026de38256c17848932a2be74203e02706ac674f1aaf"
 
   url "https://github.com/opspresso/vibemon-app/releases/download/v#{version}/VibeMon-#{version}-arm64.dmg"
   name "VibeMon"
