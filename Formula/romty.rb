@@ -1,25 +1,25 @@
 class Romty < Formula
   desc "Persistent terminal workspace manager"
   homepage "https://github.com/opspresso/romty"
-  version "0.21.0"
+  version "0.21.1"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/opspresso/romty/releases/download/v#{version}/romty_#{version}_darwin_arm64.tar.gz"
-      sha256 "ac50dc7291eba135650a423bf185d876fc3ae4509edf5aaef8594d9e18b09e6a"
+      sha256 "2145fbf841e4cb778bddacddfd368899e85fca408506514e599d9304a7317b3a"
     else
       url "https://github.com/opspresso/romty/releases/download/v#{version}/romty_#{version}_darwin_amd64.tar.gz"
-      sha256 "8bc34efce0235f2a0da0b60d29fbe78772cf607e52960e0ac956d02361a99cdc"
+      sha256 "cdb9ff4f380b3a61c5793dc1f29e0a9a8e44866e80729acebfd25e2a1ecf7c29"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/opspresso/romty/releases/download/v#{version}/romty_#{version}_linux_arm64.tar.gz"
-      sha256 "5a08c62b43ac7a89221aafe2a3ffda8f39348f3144d90617a68b0fa828a0a66c"
+      sha256 "70ea5f15d7ec9ca237bd7090075569c98782883b5fb786276bde34a50a0ceba9"
     else
       url "https://github.com/opspresso/romty/releases/download/v#{version}/romty_#{version}_linux_amd64.tar.gz"
-      sha256 "0690e2f85433ed096eca6e873c3332f1411e412a1789a38ee47171d4a3d92300"
+      sha256 "c8fa9163d5a03452f5290f1df9a8cc5e4956183a9326e4575721f3603c091012"
     end
   end
 
